@@ -1,0 +1,42 @@
+body{
+    background-image: url('https://images.unsplash.com/photo-1557821552-17105176677c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHNob3BwaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+   
+}
+
+.grocery{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: bolder;
+}
+
+.itemList{
+    
+  background-color: #0000006e;
+  list-style: none;
+}
+.App{
+  position: fixed;
+  height:100%;
+  width: 100%;
+
+}
+.Home{
+  position: fixed;
+
+}
+.update{
+  width: 50%;
+     height: 50%; 
+    background: rgba(29, 27, 27, 0.8);
+    position: absolute;
+    /* display: flex;
+    justify-content: center;
+    padding-top:5%; */
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(40%, 50%);
+    /* z-index: 15;
+    overflow: auto; */
+}
