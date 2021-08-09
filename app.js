@@ -13,7 +13,7 @@ mongoose.connect(mongoURL, {
 
 
 const app = express();
-app.use(core());
+app.use(core);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
