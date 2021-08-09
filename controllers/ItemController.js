@@ -6,7 +6,7 @@ const createError = require('http-errors')
 exports.getAllItems = async (req, res, next) => {
     try {
      
-      let items = await ItemsModel.find({}).select(' name amount priorityNr');
+      let items = await ItemsModel.find({}).select(' name amount priorityNr checked');
       res.json({ success: true, data: items });
   
      
@@ -67,9 +67,15 @@ exports.getAllItems = async (req, res, next) => {
   exports.updateItem = async (req, res, next) => {
     const {id} =req.params
     console.log('id ist',id)
+    console.log(req.body)
     try {
       
-      const item = await ItemsModel.findByIdAndUpdate(id, req.body, {new:true})
+      const item = await ItemsModel.findById(id)
+      item.name=req.body.name
+      item.amount=req.body.amount
+      item.priorityNr=req.body.priorityNr
+      item.checked=req.body.checked
+      await item.save()
       res.send({success:true, data:item})
     } catch (e) {
       console.log(e);

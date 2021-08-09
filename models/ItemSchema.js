@@ -16,6 +16,10 @@ const ItemSchema = new Schema({
     priorityNr:{
       type:Number,
       default:'1'
+    },
+    checked:{
+      type:Boolean,
+      default:false
     }
     
 })
