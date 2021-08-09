@@ -12,7 +12,7 @@ export default function Home() {
     
 const getItems= async(e)=>{
     try{
-    const allItems= await axios.get(baseURL+'items')
+    const allItems= await axios.get(baseURL)
    
     setItems(allItems.data.data)
     }catch(e){
@@ -35,20 +35,20 @@ const addItem=async(e)=>{
    }
    console.log('Create item', item);
 try{
-    const res= await axios.post(baseURL+'items', item)
+    const res= await axios.post(baseURL, item)
     // console.log(res);
     window.location.reload()
 }catch(e){
     console.log(e);
 }
-    const addItem= await axios.post(baseURL+'items')
+    const addItem= await axios.post(baseURL)
 }
 
 const deleteItem=async(id)=>{
  
     console.log(items)
     try{
-    const deleteItem= await axios.delete(baseURL+'items/'+id)
+    const deleteItem= await axios.delete(baseURL+'/'+id)
     window.location.reload()
     }catch(e){
         console.log(e);

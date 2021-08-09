@@ -2,10 +2,13 @@
   "name": "grocery-shopping-list",
   "version": "1.0.0",
   "main": "app.js",
+  "homepage": ".",
   "scripts": {
-    "cleint": "npm run start --prefix cleint",
+    "start": "node app.js",
+    "client": "npm run start --prefix client",
     "server": "nodemon app.js",
-    "dev": "concurrently \"npm run server\" \"npm run cleint\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +23,7 @@
     "faker": "^5.5.3",
     "http-errors": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.13.5"
+    "mongoose": "^5.13.5",
+    "react-scripts": "^4.0.3"
   }
 }

@@ -8,7 +8,7 @@ export default function UpdateItem() {
     const {id} = useParams()
     console.log(id);
     const getItem=async(e)=>{
-        const res=await axios.get(baseURL+'items/'+id)
+        const res=await axios.get(baseURL+'/'+id)
         console.log(res.data);
         setItem(res.data)
     }
@@ -25,7 +25,7 @@ export default function UpdateItem() {
   }
   console.log('itemmmmmmm', item);
 try{
-        const UpdateItem= await axios.post(baseURL+'items/'+id,item)
+        const UpdateItem= await axios.post(baseURL+'/'+id,item)
         window.location.replace('/')
         }catch(e){
             console.log(e);
