@@ -14,7 +14,7 @@ const getItems= async(e)=>{
     try{
     const allItems= await axios.get(baseURL)
    
-    setItems(allItems.data.data)
+    setItems(allItems.data.data.sort((a,b)=>a.priorityNr-b.priorityNr))
     }catch(e){
         console.log(e);
     }
