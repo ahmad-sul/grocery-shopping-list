@@ -6,7 +6,7 @@ const mongoURL = require('./config/env').mongoURL
 mongoose.connect(
     mongoURL,
     { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
-    () => console.log("connected to blogs-app DB")
+    () => console.log("connected to grocery-List DB")
   );
 
 

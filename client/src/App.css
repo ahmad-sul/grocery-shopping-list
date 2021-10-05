@@ -24,7 +24,7 @@ body{
 }
 .Home{
   position: fixed;
-
+align-self: center;
 }
 .update{
   width: 50%;
@@ -33,4 +33,12 @@ body{
     position: absolute;
     transform: translate(40%, 50%);
    
+}
+
+.close{
+  position: absolute;
+  top: 0;
+  right: 0px;
+  cursor: pointer;
+  text-decoration: none;
 }

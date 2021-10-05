@@ -76,7 +76,8 @@ const onCheck=async(item)=>{
 console.log(items);
 
     return (
-    <div className='Home container d-flex flex-column align-items-center mt-5'>
+        <div className='container'>
+    <div className='Home w-100  mt-5'>
         <h1 className='grocery fs-1 text-center'>Grocery shopping list</h1>
         <div className='w-50'>
                <form className="row g-3 justify-content-center my-5" onSubmit={addItem}>
@@ -129,6 +130,7 @@ console.log(items);
 
         </div>
      
+    </div>
     </div>
     )
 }
