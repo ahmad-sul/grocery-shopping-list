@@ -28,7 +28,7 @@ align-self: center;
 }
 .update{
   width: 50%;
-     height: 50%; 
+     height: 60%; 
     background: rgba(29, 27, 27, 0.8);
     position: absolute;
     transform: translate(40%, 50%);
