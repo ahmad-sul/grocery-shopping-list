@@ -11,7 +11,7 @@ export default function App() {
     <div className="App">
       <Home/>
       <Switch>
-         <Route exact path="/" component={Home} /> 
+         {/* <Route exact path="/" component={Home} />  */}
         <Route exact path="/update/:id" component={UpdateItem} />
       </Switch>
     </div>
