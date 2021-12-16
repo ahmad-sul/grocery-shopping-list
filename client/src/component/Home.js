@@ -99,6 +99,7 @@ console.log(items);
            </div>
         </form>
         {items &&  items.map((item)=>{
+            console.log('itemmmmmmm',item);
             return(
                <form key={item._id} className='mt-2 '>
                 <ul className="d-flex itemList  d-flex justify-content-between align-items-center w-100 rounded">
