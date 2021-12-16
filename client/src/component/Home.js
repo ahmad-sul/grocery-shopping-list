@@ -17,7 +17,7 @@ const getItems= async(e)=>{
    const filterItems = sortItems.filter((item)=>!item.checked)
    sortItems.map((el)=>{
        if (el.checked) {
-           filterItems.push(el)
+          return filterItems.push(el)
        }
    })
    console.log(filterItems);
@@ -42,20 +42,20 @@ const addItem=async(e)=>{
    }
    console.log('Create item', item);
 try{
-    const res= await axios.post(baseURL, item)
+     await axios.post(baseURL, item)
     // console.log(res);
     window.location.reload()
 }catch(e){
     console.log(e);
 }
-    const addItem= await axios.post(baseURL)
+     await axios.post(baseURL)
 }
 
 const deleteItem=async(id)=>{
  
     console.log(items)
     try{
-    const deleteItem= await axios.delete(baseURL+'/'+id)
+    await axios.delete(baseURL+'/'+id)
     window.location.reload()
     }catch(e){
         console.log(e);
@@ -66,7 +66,7 @@ const onCheck=async(item)=>{
     const id=item._id
     console.log(updateItem);
     try{
-        const UpdateItem= await axios.post(baseURL+'/'+id,updateItem)
+         await axios.post(baseURL+'/'+id,updateItem)
         window.location.replace('/')
     }catch(e){
         console.log(e);
@@ -111,7 +111,7 @@ console.log(items);
                    <div className='d-flex'>
                    <span className='p-2 rounded fw-bolder  text-white bg-success m-2'>Amount: {item.amount}</span>
                  
-                   <Link to={'update/'+item._id} className="btn btn-info m-2"><AiOutlineEdit/></Link>
+                   <Link to={item._id} className="btn btn-info m-2"><AiOutlineEdit/></Link>
                  
                         <button className="btn btn-danger m-2" onClick={()=>deleteItem(item._id)}><RiDeleteBin5Line/></button>
                     </div>

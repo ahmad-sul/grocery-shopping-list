@@ -15,7 +15,7 @@ export default function UpdateItem() {
     }
     useEffect(()=>{
         getItem()
-    },[])
+    })
 
     const UpdateItem=async(e)=>{
         e.preventDefault()
@@ -27,7 +27,7 @@ export default function UpdateItem() {
   }
   console.log('itemmmmmmm', item);
 try{
-        const UpdateItem= await axios.post(baseURL+'/'+id,item)
+         await axios.post(baseURL+'/'+id,item)
         window.location.replace('/')
         }catch(e){
             console.log(e);

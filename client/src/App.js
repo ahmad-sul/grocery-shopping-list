@@ -12,7 +12,7 @@ export default function App() {
       <Home/>
       <Switch>
          {/* <Route exact path="/" component={Home} />  */}
-        <Route exact path="/update/:id" component={UpdateItem} />
+        <Route exact path="/:id" component={UpdateItem} />
       </Switch>
     </div>
     </BrowserRouter>
